@@ -2,7 +2,7 @@ What will be the output of this program?
 
 class A
 {
-	
+	int i=10;
 }
 
 class B extends A
@@ -16,7 +16,7 @@ public class MainClass
 	{
 		A a = new B();
 
-		System.out.println(a.i);   //Compile time error 
+		System.out.println(a.i);   
 	}
 }
 
