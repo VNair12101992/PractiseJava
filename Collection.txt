@@ -1,0 +1,650 @@
+1. What is the output of following Java Program?
+import java.util.ArrayList; 
+
+class Demo { 
+public void show() 
+    { 
+        ArrayList<Integer> list = new ArrayList<Integer>(); 
+        list.add(4); 
+        list.add(7); 
+        list.add(1); 
+        for (int number : list) { 
+            System.out.print(number + " "); 
+        } 
+    } 
+} public class Main { 
+public static void main(String[] args) 
+    { 
+        Demo demo = new Demo(); 
+        demo.show(); 
+    } 
+} 
+A. Compilation Error
+B. 4 7 1
+C. 1 4 7
+D. None
+
+
+
+
+
+
+
+
+
+
+
+
+Answer : 4 7 1
+
+Explanation : List in java stores its elements in Sequential manner it maintains insertion order. List provides the ability of accessing elements using index.Collections are in the package util so we are importing java.util.ArrayList.
+
+2. What is the output of following Java Program?
+
+import java.util.LinkedList; 
+  
+class Demo { 
+public void show() 
+    { 
+        LinkedList<String> list = new LinkedList<String>(); 
+        list.add("Element1"); // line 6 
+        list.add("Element2"); 
+        System.out.print(list.getFirst()); // line 8 
+    } 
+} public class Main { 
+public static void main(String[] args) 
+    { 
+        Demo demo = new Demo(); 
+        demo.show(); 
+    } 
+} 
+A. Element1
+B. Compilation Error at line 8
+C. Runtime Error
+
+
+
+
+
+
+
+Answer: A. Element1
+Explanation : LinkedList has a getFirst() method . It returns an elements at Zero index. LinkedList also maintains its insertion order and provides easy accessing of elements.
+
+3. What is the output of following Java Program?
+
+import java.util.ArrayList; 
+class Demo { 
+public void show() 
+    { 
+        ArrayList<String> list = new ArrayList<String>(); 
+        System.out.print(list.get(0)); 
+    } 
+} public class Main { 
+public static void main(String[] args) 
+    { 
+        Demo demo = new Demo(); 
+        demo.show(); 
+    } 
+} 
+A. ArrayIndexOutOfBoundException
+B. IndexOutOfBoundException
+C. null
+
+
+
+
+
+Answer : IndexOutOfBoundException
+Explanation : There is no element present in that index ‘0’ so it is IndexOutOfBoundException. In java, if we access the elements out of the index it provides ArrayIndexOutOfBoundException in array. In Collection. it provide IndexOutOfBoundException.
+
+4. What is the Output of following Java Program?
+
+import java.util.ArrayList; 
+  
+class Demo { 
+public void show() 
+    { 
+        ArrayList<String> list = new ArrayList<String>(); 
+        list.add("GeeksForGeeks_one"); // line 6 
+        list.add("GeeksForGeeks_two"); 
+        System.out.print(list.getFirst()); // line 8 
+    } 
+} public class Main { 
+public static void main(String[] args) 
+    { 
+        Demo demo = new Demo(); 
+        demo.show(); 
+    } 
+} 
+A. GeeksForGeeks_one
+B. Compilation Error
+C. Runtime Error
+
+
+
+
+
+
+Answer: Compilation Error
+Explanation: ArrayList doesn’t have method getFirst(). So it is compilation error.getmethod() is available only LinkedList. Therefore, it provide compilation error in this program.
+
+
+5. What is the Output of following Java Program?
+
+import java.util.LinkedList; 
+  
+class Demo { 
+public void show() 
+    { 
+        LinkedList<String> list = new LinkedList<String>(); 
+  
+        System.out.print(list.getFirst()); 
+    } 
+} public class Main { 
+public static void main(String[] args) 
+    { 
+        Demo demo = new Demo(); 
+        demo.show(); 
+    } 
+} 
+A. null
+B. IndexOutOfBoundException
+C. NoSuchElementException
+
+
+
+
+
+Answer: NoSuchElementException 
+Explanation: There is no element in LinkedList so it return NoSuchElementException. NoSuchElementException is a RuntimeException thrown when there is no more element in it. NoSuchElementException extends RuntimeException.
+
+6. What is the Output of following Java Program?
+
+import java.util.LinkedList; 
+  
+class Demo { 
+public void show() 
+    { 
+        LinkedList<Integer> list = new LinkedList<Integer>(); 
+        list.add(1); 
+        list.add(4); 
+        list.add(7); 
+        list.add(5); 
+        for (int i = 0; i < list.size(); i++) { 
+            System.out.print(list.get(i) + " "); 
+        } 
+    } 
+} public class Main { 
+public static void main(String[] args) 
+    { 
+        Demo demo = new Demo(); 
+        demo.show(); 
+    } 
+} 
+A. Compilation Error
+B. 1 4 7 5
+C. 1 4 5 7
+
+
+
+
+
+Answer:  1 4 7 5
+Explanation: List stores element in sequential order and then we can access element in List using index. List provides the ability to access its elements by using its index. But in set, map elements are not accessed by using index.
+
+7. What is the output of following Java Program?
+
+import java.util.Collections; 
+import java.util.LinkedList; 
+import java.util.List; 
+  
+class Demo { 
+public void show() 
+    { 
+        List<Integer> list = new LinkedList<Integer>(); 
+        list.add(1); 
+        list.add(4); 
+        list.add(7); 
+        list.add(5); 
+        Collections.sort(list); // line 9 
+        System.out.println(list); 
+    } 
+} public class Main { 
+public static void main(String[] args) 
+    { 
+        Demo demo = new Demo(); 
+        demo.show(); 
+    } 
+} 
+
+A. Compilation Error at line 9
+B. [1, 4, 5, 7]
+C. [1, 4, 7, 5]
+
+
+
+
+
+
+Answer: [1, 4, 5, 7]
+Explanation: Collections.sort() sort the list in ascending order. Collections class provides static methods for sorting the elements in collections. If Collection elements are of set type elements are inserted in sorted order no need to sort.
+
+8. What is the Output of following Java Program?
+
+import java.util.ArrayList; 
+import java.util.Collections; 
+import java.util.Iterator; 
+  
+class Demo { 
+public void show() 
+    { 
+        ArrayList<String> list = new ArrayList<String>(); 
+        list.add("banana"); 
+        list.add("apple"); 
+        Iterator itr = list.iterator(); 
+  
+        Collections.sort(list); 
+        while (itr.hasNext()) { 
+            System.out.print(itr.next() + " "); 
+        } 
+    } 
+} public class Main { 
+public static void main(String[] args) 
+    { 
+        Demo demo = new Demo(); 
+        demo.show(); 
+    } 
+} 
+A. Compilation Error cannot give Collections.sort() after Iterator.
+B. apple banana
+C. banana apple
+
+
+
+
+
+Answer: apple banana
+Explanation: Collections.sort() sort element and Iterator is an object used to traverse through a Collection. Iterator is an interface available in Collection framework in java.util.package. It is used to traverse elements one by one.
+
+9. What is the Output of following Java Program?
+
+import java.util.ArrayList; 
+  
+class Demo { 
+public void show() 
+    { 
+        ArrayList<String> list = new ArrayList<String>(); 
+        ArrayList<Integer> list1 = new ArrayList<Integer>(); 
+        boolean check = (list.getClass() == list1.getClass()); 
+        System.out.println(check); 
+    } 
+} public class Main { 
+public static void main(String[] args) 
+    { 
+        Demo demo = new Demo(); 
+        demo.show(); 
+    } 
+} 
+A. true
+B. false
+
+
+
+
+
+
+Answer:  true
+Explanation: getclass() method return the runtime class of an object. That class object is the object that is locked by static synchronized method of represented class. Here both are in ArrayList Class so answer is true.
+
+10. What is the Output of following Java Program?
+
+import java.util.LinkedList; 
+  
+class Demo { 
+public void show() 
+    { 
+        LinkedList<String> list = new LinkedList<String>(); 
+  
+        System.out.println(list.getClass()); 
+    } 
+} public class Main { 
+public static void main(String[] args) 
+    { 
+        Demo demo = new Demo(); 
+        demo.show(); 
+    } 
+} 
+A. class java.util.LinkedList
+B. String
+C. Compiler Error
+
+
+
+
+
+Answer: class java.util.LinkedList
+Explanation: getclass() method returns the runtime class of an object. That class object is the object that is locked by static synchronized method of represented class. Here LinkedList is the runtime class so the answer is java.util.LinkedList.
+
+11.What is the Output of following Java Program?
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Demo {
+
+  public static void main(String[] args) {
+
+    List<Integer> list = new ArrayList<Integer>();
+    
+    Integer[] arr = {2,10,3};
+    
+    list = Arrays.asList(arr);
+    
+    list.set(0, 3);
+    
+    System.out.println(list);
+    
+    list.add(1);
+    
+    System.out.println(list);
+  }
+
+}
+
+  A. [3, 10, 3,1]
+  B. [3,10,3]
+  C. [3,10,3], followed by exception
+  D. [2, 10, 3,1]
+  E. [2,10,3]
+
+
+
+
+Answer:[3,10,3], followed by exception
+
+Explanation: Arrays.asList() returns a fixed-size list backed by the specified array. Therefore, the arraylist can’t grow.
+So, when add() is called, an exception is thrown.
+
+12.What is the Output of following Java Program?
+public class Employee implements Comparable<Employee>{
+
+   int id;
+  
+   String name;
+  
+  Employee(int id, String name){
+    this.id = id;
+    this.name = name;
+  }
+
+  @Override
+  public int compareTo(Employee emp) {
+    return this.name.compareTo(emp.name);
+  }
+  
+}
+
+
+import java.util.Comparator;
+
+public class EmployeeComparator implements Comparator<Employee>{
+
+  @Override
+  public int compare(Employee emp1, Employee emp2) {
+    
+    return emp2.id - emp1.id;
+  }
+
+}
+
+
+
+import java.util.TreeSet;
+
+public class TreeSetDemo{
+
+  public static void main(String[] args) {
+
+    TreeSet<Employee> empTreeSet = new TreeSet<Employee>(new EmployeeComparator());
+    
+    Employee emp1 = new Employee(20, "Clark");
+    Employee emp2 = new Employee(24, "Bernie");
+    Employee emp3 = new Employee(3, "Alex");
+    
+    empTreeSet.add(emp1);
+    empTreeSet.add(emp2);
+    empTreeSet.add(emp3);
+    
+    
+    for(Employee emp : empTreeSet)
+          System.out.print(emp.name + " ");
+    
+
+  }
+
+}
+
+ 
+  A.Alex Bernie Clark
+  B.Bernie Clark Alex
+  C.Alex Clark Bernie
+  D.Other
+
+
+
+
+Answer:Bernie Clark Alex
+
+Explanation:Comparator takes precedence over Comparable, when both are implemented.
+
+
+
+13) 
+public class TreeSetDemo{
+
+  public static void main(String[] args) {
+
+	Set number = new HashSet();   		// line 1
+	numbers.add(new Integer (45));	 
+	numbers.add(88);	 
+	numbers.add(new Integer (77));	 
+	numbers.add(null);	 
+	numbers.add(789L);	 
+	Interator iterator = numbers.iterator();    //Line 7
+	while (iterator.hasNext()){
+	sout(iterator.next);
+	}
+}
+
+O/P
+1. Runtime exception
+2. 4588null789 
+3. 458877null789
+4. compiler error on line 1 
+5. compiler error on line 7 
+6. null7899889884577
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ans:
+3. 458877null789
+Note: Treeset doest not accept null.
+
+
+
+	
+
+14.
+public class TreeSetDemo{
+
+  public static Collection get(){ 
+
+	Collection sorted = new LinkList();
+	sorted.add("A");	 
+	sorted.add("B");	
+	sorted.add("C");
+	return sorted;
+	
+	}
+	psvm(){
+for(Object obj:get()){
+sout(obj +",");
+}
+}
+
+O/P
+1. A,B,C
+2.B,C,A
+3.Compile error
+4. the code run with no output
+
+
+
+
+Answer: 
+2.B,C,A
+
+
+15.
+
+public class TreeSetDemo{
+
+psvm()
+{
+Set set=new TreeSet();
+set.add(1);//line1
+set.add(2.7);//line2
+set.add(2);//line3
+for(Object ele:set)
+{
+sout(ele);
+}
+}
+}
+
+
+O/p
+1. compile error at line 2
+2. runtime exception
+3. no output
+4.1 
+   2.7
+     2
+
+
+
+
+
+answer:
+
+
+
+
+
+
+
+16.
+public class TreeSetDemo{
+
+psvm()
+{
+LinkedList l=new LinkedList();
+ l.add(1);
+ l.add(new Interger(2));//line1
+ l.add((int)2.5);//line2
+ l.add(new Interger('A') );//line3
+for(Interger num: l)
+{
+sout(num);
+}
+}
+}
+ 
+
+
+O/P:
+1.compile error at line 2
+2.1
+   2
+    2
+   65
+
+3.compilation error at line 3
+4. 1
+    2
+     2
+      A
+
+
+
+
+
+
+
+
+
+
+Answer: 1
+         2
+          2
+           65
+
+
+17.
+
+class Employee{
+E eObj1;
+A aObj1;
+Employee(E eObj1,A aObj1){
+this.eObj1 = eObj1;
+this.aObj1 = aObj1;
+}
+
+Public void display(){
+sout(eObj1);
+sout(aObj1);
+}
+}
+
+class Generics{
+ PSVM(){
+ Employee emp = new Employee("Java",25);
+  emp.display();
+}
+}
+
+o/p:
+
+1. null
+2. Java
+3. 	Java 
+	25
+
+4. Compilation fail
+5. Exception is thrown at runtime 
+
+
+
+
+
+
+
+
+
+
+
+Ans
+4.Compilation fail
+
